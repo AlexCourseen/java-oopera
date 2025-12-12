@@ -2,20 +2,20 @@ package ru.yandex.practicum;
 
 import java.util.ArrayList;
 
-public class Ballet extends MusicalShow{
-    private String choreographer;
+public class Ballet extends MusicalShow {
+    private Choreographer choreographer;
 
-    public Ballet(String title, String duration, Director director, ArrayList<String> listOfActors, String musicAuthor,
-                  String librettoText, String choreographer) {
+    public Ballet(String title, int duration, Director director, ArrayList<Actor> listOfActors, MusicAuthor musicAuthor,
+                  String librettoText, Choreographer choreographer) {
         super(title, duration, director, listOfActors, musicAuthor, librettoText);
         this.choreographer = choreographer;
     }
 
-    public String getChoreographer() {
+    public Person getChoreographer() {
         return choreographer;
     }
 
-    public void setChoreographer(String choreographer) {
+    public void setChoreographer(Choreographer choreographer) {
         this.choreographer = choreographer;
     }
 }

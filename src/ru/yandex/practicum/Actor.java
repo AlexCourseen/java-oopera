@@ -23,7 +23,6 @@ public class Actor extends Person {
         Actor otherActor = (Actor) obj;
         return Objects.equals(getName(), otherActor.getName()) &&
                 Objects.equals(getSurname(), otherActor.getSurname()) &&
-                Objects.equals(getGender(), otherActor.getGender()) &&
                 (getHeight() == otherActor.getHeight());
     }
 
@@ -36,6 +35,10 @@ public class Actor extends Person {
         hash = hash * 31;
         if (getSurname() != null) {
             hash = hash + getSurname().hashCode();
+        }
+        hash = hash * 35;
+        if (getHeight() > 0) {
+            hash = hash + (int) getHeight();
         }
         return hash;
     }
