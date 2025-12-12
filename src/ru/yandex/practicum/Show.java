@@ -48,7 +48,7 @@ public class Show {
     }
 
     public void printAllActors() {
-        if (!isListOfActorsEmpty()) {
+        if (!listOfActors.isEmpty()) {
             for (Actor actor : listOfActors) {
                 System.out.println(actor);
             }
@@ -66,8 +66,8 @@ public class Show {
     }
 
     public void substituteActorToNewActor(Actor newActor, String actorSurname) {
-        if (!isListOfActorsEmpty()) {
-            boolean isActorInList=false;
+        if (!listOfActors.isEmpty()) {
+            boolean isActorInList = false;
             for (Actor actor : listOfActors) {
                 if (actor.getSurname().equals(actorSurname)) {
                     int index = listOfActors.indexOf(actor);
@@ -81,13 +81,5 @@ public class Show {
                 System.out.println("Актера с фамилией " + actorSurname + " нет в данном спектакле.");
             }
         }
-    }
-
-    private boolean isListOfActorsEmpty() {
-        if (listOfActors.isEmpty()) {
-            System.out.println("Список актеров пуст");
-            return true;
-        }
-        return false;
     }
 }

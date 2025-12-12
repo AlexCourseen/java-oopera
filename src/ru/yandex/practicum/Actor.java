@@ -3,8 +3,19 @@ package ru.yandex.practicum;
 import java.util.Objects;
 
 public class Actor extends Person {
+    private double height;
+
     public Actor(String name, String surname, Gender gender, double height) {
-        super(name, surname, gender, height);
+        super(name, surname, gender);
+        this.height = height;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
     }
 
     @Override

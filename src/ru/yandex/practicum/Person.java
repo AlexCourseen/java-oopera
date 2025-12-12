@@ -3,15 +3,7 @@ package ru.yandex.practicum;
 public class Person {
     private String name;
     private String surname;
-    private double height;
     private final Gender gender;
-
-    public Person(String name, String surname, Gender gender, double height) {
-        this.name = name;
-        this.surname = surname;
-        this.height = height;
-        this.gender = gender;
-    }
 
     public Person(String name, String surname, Gender gender) {
         this.name = name;
@@ -39,11 +31,4 @@ public class Person {
         return gender;
     }
 
-    public double getHeight() {
-        return height;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
 }

@@ -12,8 +12,8 @@ public class Theatre {
         Director director1 = new Director("Алексей", "Балабанов", Gender.MALE, 4);
         Director director2 = new Director("Никита", "Михалков", Gender.MALE, 10);
 
-        MusicAuthor musicAuthor = new MusicAuthor("Йозеф", "Гайден", Gender.MALE);
-        Choreographer choreographer = new Choreographer("Майя", "Плисецкая", Gender.FEMALE);
+        Person musicAuthor = new Person("Йозеф", "Гайден", Gender.MALE);
+        Person choreographer = new Person("Майя", "Плисецкая", Gender.FEMALE);
 
         ArrayList<Actor> simpleShowActors = new ArrayList<>();
         Show simpleShow = new Show("Отцы и дети", 120, director1, simpleShowActors);
@@ -37,7 +37,7 @@ public class Theatre {
 
         ArrayList<Actor> balletActors = new ArrayList<>();
         String balletLibrettoText = "Жили был лебедь на озере...";
-        Ballet ballet = new Ballet("Лебединое озеро", 60,director2,balletActors,musicAuthor,balletLibrettoText,choreographer);
+        Ballet ballet = new Ballet("Лебединое озеро", 60, director2, balletActors, musicAuthor, balletLibrettoText, choreographer);
         ballet.addActorToShow(actor3);
         ballet.addActorToShow(actor1);
         ballet.printAllActors();

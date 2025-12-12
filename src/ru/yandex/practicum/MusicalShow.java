@@ -3,11 +3,11 @@ package ru.yandex.practicum;
 import java.util.ArrayList;
 
 public class MusicalShow extends Show {
-    private MusicAuthor musicAuthor;
+    private Person musicAuthor;
     private String librettoText;
 
     public MusicalShow(String title, int duration, Director director, ArrayList<Actor> listOfActors,
-                       MusicAuthor musicAuthor, String librettoText) {
+                       Person musicAuthor, String librettoText) {
         super(title, duration, director, listOfActors);
         this.musicAuthor = musicAuthor;
         this.librettoText = librettoText;
@@ -17,7 +17,7 @@ public class MusicalShow extends Show {
         return musicAuthor;
     }
 
-    public void setMusicAuthor(MusicAuthor musicAuthor) {
+    public void setMusicAuthor(Person musicAuthor) {
         this.musicAuthor = musicAuthor;
     }
 
